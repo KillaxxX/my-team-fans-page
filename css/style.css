@@ -105,6 +105,12 @@ body{
 .container .box-two .rows-two > .individual:nth-child(2){
     margin-top: 85px ;
 }
+/* Name Teams*/
+
+.container .box-two > .block-column >.rows-one .name,
+.container .box-two > .block-column >.rows-two .name{
+    font: bold 12px 'Open Sans', sans-serif;
+}
 
 /* Footer */
 .container.footer{
