@@ -15,25 +15,31 @@ body{
 }
 
 /* Container */
-.container > .box-one,
-.container  .box-two{
-    display: grid;
-    width: 90%;
-    place-content: center;
-    grid-template-columns: repeat(2, 30%) ;
+
+.container{
+    max-width: 1024px;
+    display: block;
+    margin: 0 auto;
+    
 }
 
 /* Box one*/
+.container > .box-one{
+    display: grid;
+    place-content: center;
+    width: 100%;
+    grid-template-columns: repeat(2, 35%);
+}
+
 .container > .box-one > .title,
 .container > .box-one .description{
-    border: 1px solid #252525;
     margin-top: 25px;
     padding: 10px;
+    width: 100%;
 }
 
 /* Title */
 .container > .box-one > .title{
-    width: 100%;
     font-size: 12px;
     font-family: 'Merriweather', serif;
 }
@@ -45,12 +51,69 @@ body{
 }
 
 .container > .box-one .description .decriptionHelp{
-    width: 75%;
+    width: 100%;
     margin-top: 10px;
 }
 
 .container > .box-one .description > .subtitle,
-.container > .box-one .description .decriptionHelp{
+.container > .box-one .description .decriptionHelp,
+.container .box-two > .block-column .rows-img .name{
     font-size: 12px;
     font-family: 'Open Sans', sans-serif;
+}
+
+/* Box two */
+.container .box-two{
+    display: grid;
+    height: 900px;
+    width: 100%;
+    place-content: center;
+}
+
+.container .box-two > .block-column{
+    display: grid;
+    place-content: center;
+    width: 100%;
+}
+
+
+.container .box-two .rows-one,
+.container .box-two .rows-two{ 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 45px;
+}
+
+.container .box-two .rows-one > .individual,
+.container .box-two .rows-two > .individual{
+    place-content: center;
+    display: grid;
+}
+.container .box-two .rows-one > .individual #team,
+.container .box-two .rows-one > .individual .name,
+.container .box-two .rows-two > .individual #team,
+.container .box-two .rows-two > .individual .name{
+    grid-template-rows: repeat(2, 1fr);
+}
+.container .box-two .rows-one > .individual #team,
+.container .box-two .rows-two > .individual #team{
+    width: 220px;
+    height: 300px;
+}
+
+.container .box-two .rows-one > .individual:nth-child(2),
+.container .box-two .rows-two > .individual:nth-child(2){
+    margin-top: 85px ;
+}
+
+/* Footer */
+.container.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container.footer #copyright{
+    font-family: sans-serif;
+    font-size: 12px;
+    color: #424242;
 }
