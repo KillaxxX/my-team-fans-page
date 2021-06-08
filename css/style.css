@@ -73,7 +73,6 @@ body{
     width: 100%;
     place-content: center;
     grid-template-rows: repeat(2, 0.2fr);
-    border: 1px solid #000;
 }
 
 
@@ -119,6 +118,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    height: 40px;
 }
 .container.footer #copyright{
     font-family: sans-serif;
